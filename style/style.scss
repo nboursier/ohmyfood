@@ -212,6 +212,7 @@ img{
   font-size: 24px;
   font-weight: 700;
   padding-left: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
 .fonctionnement-container__btn{
@@ -625,7 +626,7 @@ position: relative;
   height : 69px;
   display: flex;
   justify-content:start;
-  &:active {
+  &:hover {
     .menu--card__select{
       animation-name: check ;
       animation-duration: 1000ms;
@@ -800,6 +801,8 @@ position: relative;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: unset;
+    align-items: center;
+	  justify-content: center;
   }
 
   .footer--container{

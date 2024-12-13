@@ -202,6 +202,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   padding-left: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
 .fonctionnement-container__btn {
@@ -605,12 +606,12 @@ a {
   display: flex;
   justify-content: start;
 }
-.menu--card:active .menu--card__select {
+.menu--card:hover .menu--card__select {
   animation-name: check;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
 }
-.menu--card:active .menu--card__iconcheck {
+.menu--card:hover .menu--card__iconcheck {
   opacity: 1;
 }
 
@@ -760,6 +761,8 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: unset;
+    align-items: center;
+    justify-content: center;
   }
   .footer--container {
     padding-top: 40px;
