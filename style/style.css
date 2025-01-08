@@ -588,7 +588,12 @@ a {
   position: relative;
 }
 
-@keyframes check {
+@keyframes check1 {
+  100% {
+    transform: translateX(-25px);
+  }
+}
+@keyframes check2 {
   100% {
     width: 59px;
   }
@@ -604,48 +609,58 @@ a {
   width: auto;
   height: 69px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
 }
 .menu--card:hover .menu--card__select {
-  animation-name: check;
+  animation-name: check2;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
 }
 .menu--card:hover .menu--card__iconcheck {
-  opacity: 1;
+  animation-name: check1;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
 }
 
 .menu--card__container {
   display: flex;
-  width: auto;
-  flex-direction: column;
-  flex-grow: 1;
-  white-space: nowrap;
+  width: 100%;
+  flex-direction: row;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menu--card__select {
   width: 0px;
+  height: 69px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  z-index: 3;
+  position: relative;
 }
 
 .menu--card__iconcheck {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
-  opacity: 0;
+  z-index: 4;
+  position: relative;
+  right: -25px;
 }
 
 .menu--card__content {
+  display: flex;
   padding-top: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
-  width: auto;
+  width: 100%;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu--card__txt1 {
@@ -683,6 +698,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: auto;
 }
 
 .menu--card__txt2 {
@@ -696,6 +712,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: auto;
 }
 
 .menu--command {
@@ -731,8 +748,8 @@ a {
 }
 
 /****** Media queries ***********/
-/* Medium devices (tablets, more/equal than 800px) */
-@media (min-width: 800px) {
+/* Medium devices (tablets, more/equal than 768px) */
+@media (min-width: 768px) {
   .fonctionnement-container {
     align-items: center;
     justify-content: center;
