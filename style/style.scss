@@ -623,21 +623,6 @@ a {
   position: relative;
 }
 
-@keyframes check1 {
-  0% {}
-
-  100% {
-    transform: translateX(-25px);
-  }
-}
-
-@keyframes check2 {
-  0% {}
-
-  100% {
-    width: 59px;
-  }
-}
 
 .menu--card {
 
@@ -654,32 +639,25 @@ a {
   justify-content: space-between;
   position: relative;
   z-index: 3;
+  transition: transform 1000ms ease-in-out;
 
   &:hover {
     .menu--card__select {
-      animation-name: check2;
-      animation-duration: 1000ms;
-      animation-fill-mode: forwards;
-
+      width: 59px;
     }
+
     .menu--card__iconcheck {
-      animation-name: check1;
-      animation-duration: 1000ms;
-      animation-fill-mode: forwards;
+      transform: translateX(-25px);
+    }
   }
 }
-}
+
 
 .menu--card__container {
   display: flex;
   width: 100%;
   flex-direction: row;
-  
-  // white-space: nowrap;
   overflow: hidden;
-  // text-overflow: ellipsis;
-  
-
 }
 
 .menu--card__select {
@@ -691,8 +669,7 @@ a {
   align-items: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  
-  
+  transition: 1000ms;
   z-index: 3;
   position: relative;
 }
@@ -703,6 +680,7 @@ a {
   z-index: 4;
   position: relative;
   right: -25px;
+  transition: 1000ms;
 }
 
 
