@@ -18,6 +18,16 @@
     opacity: 0;
   }
 }
+@keyframes load5 {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    height: 25px;
+  }
+}
 .progress {
   width: 100%;
   display: flex;
@@ -404,6 +414,7 @@ a {
   animation-name: load4;
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
+  transition: tr;
 }
 
 .footer--container {
@@ -582,9 +593,16 @@ a {
 }
 
 .menu--card-heart2 {
+  z-index: 2;
   position: relative;
   animation-name: load3;
   animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.menu--card-heart4 {
+  animation-name: load5;
+  animation-duration: 2000ms;
   animation-fill-mode: forwards;
 }
 
@@ -592,6 +610,7 @@ a {
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
+  z-index: 1;
   position: relative;
   right: 25px;
   animation-name: load4;
